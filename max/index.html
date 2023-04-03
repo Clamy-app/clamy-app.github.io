@@ -1,46 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MaxLifeInsurance</title>
-  <style>
-    header {
-      display: flex;
-      align-items: center;
-      padding: 1rem;
-      background-color: #f5f5f5;
-    }
-    h1 {
-  margin-left: 1rem;
-  font-family: Arial, sans-serif;
-  font-size: 1.5rem;
-}
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MaxLifeInsurance</title>
+    <style>
+      header {
+        display: flex;
+        align-items: center;
+        padding: 1rem;
+        background-color: #d8ebf3;
+      }
+      h1 {
+        margin-left: 1rem;
+        font-family: Arial, sans-serif;
+        font-size: 1.5rem;
+      }
 
-.logo {
-  width: 41px;
-  height: 32px;
-}
-      </style>
-</head>
-<body>
-  <header>
-    <img class="logo" src="https://www.maxlifeinsurance.com/static-page/assets/homepage/maxlogo.svg" alt="MaxLifeInsurance Logo">
-    <h1>MaxLifeInsurance</h1>
-  </header>
-</body>
-<script>
-window.clamyWidgetSettings = [{
-  id: '3b41cd94b1c7ebfc',
-  embedType: 'conversation',
-  embedSettings: {
-      title: 'Maxlife insurance',
-      description: "I'm your virtual assistant and can answer your queries on Maxlife insurance policies. How can I help you today?",
-      css: `
+      .logo {
+        width: 41px;
+        height: 32px;
+      }
+      body {
+        height: 100%;
+        background: rgb(91 132 230 / 6%);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <img
+        class="logo"
+        src="https://www.maxlifeinsurance.com/static-page/assets/homepage/maxlogo.svg"
+        alt="MaxLifeInsurance Logo"
+      />
+      <h1>MaxLifeInsurance</h1>
+    </header>
+
+    <div id="input" style="height: 60px; width: 500px; margin-top: 12px"></div>
+  </body>
+  <script>
+    window.clamyWidgetSettings = [
+      {
+        id: "3b41cd94b1c7ebfc",
+        embedType: "conversation",
+        embedSettings: {
+          title: "Maxlife insurance",
+          description:
+            "I'm your virtual assistant and can answer your queries on Maxlife insurance policies. How can I help you today?",
+          css: `
       .ConversationHeader {
         background: linear-gradient(to right, #133a72, #3e8ec1) !important;
         color: #fff !important;
-      } 
+      }
       .ConversationHeaderTitle {
         color: #fff !important;
       }
@@ -56,9 +68,15 @@ window.clamyWidgetSettings = [{
       .ConversationMainContainer {
         background: linear-gradient(0deg, #f2f2f2, #fff, #fff, #fff, #fff, transparent) !important;
       }
-    `
-  }
-}]
-</script>
-<script src='https://sidebar-widget.clamy.app/shim.js'></script>
+    `,
+        },
+      },
+      {
+        id: "3b41cd94b1c7ebfc",
+        embedType: "faq",
+        embedTarget: "#input",
+      },
+    ];
+  </script>
+  <script src="https://sidebar-widget.clamy.app/shim.js"></script>
 </html>
