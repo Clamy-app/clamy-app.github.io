@@ -35,8 +35,18 @@ window.clamyWidgetSettings = [{
   embedType: 'conversation',
   embedSettings: {
       title: 'Maxlife insurance',
-      description: 'How can I help you',
-      css: ".ConversationHeader: {} .ConversationMessages: {}"
+      description: "I'm your virtual assistant and can answer your queries on Maxlife insurance policies. How can I help you today?",
+      css: `
+      .ConversationHeader: {
+        background: linear-gradient(to right, #133a72, #3e8ec1) !important;
+      } 
+      .ConversationMessages: {
+        background: #fff !white;
+      }
+      .ConversationLauncher {
+        background: #f17a30 !important;
+      }
+    `
   }
 }]
 </script>
