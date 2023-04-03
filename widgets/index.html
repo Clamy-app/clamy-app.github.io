@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clamy Widgets</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <style>
+    #faq {
+      height: 50px;
+    }
+
+    #conversation-inline {
+      height: 600px;
+      width: 400px;
+    }
+  </style>
+  <body class="bg-gray-100">
+    <!-- Header -->
+    <header class="bg-white p-4 shadow-md">
+      <h1 class="text-2xl font-bold text-gray-800">Clamy Widgets</h1>
+      <a href="https://clamy.app" target="_blank">https://clamy.app</a>
+    </header>
+
+    <!-- Section 1 -->
+    <section class="container mx-auto my-8">
+      <div
+        class="border-b-2 border-gray-400 flex items-center justify-between pb-2"
+      >
+        <h2 class="text-xl font-bold text-gray-800">FAQ widget</h2>
+        <button class="bg-gray-200 text-gray-600 rounded-md px-4 py-2">
+          Show Code
+        </button>
+      </div>
+      <div class="mt-4 p-16">
+        <div id="faq" class="w-full h-96"></div>
+        <!-- Code snippet -->
+        <pre class="hidden bg-gray-100 p-4 my-4 text-xs">
+window.clamyWidgetSettings = [
+{
+    id: "435117c7f495b7ba",
+    embedType: "faq",
+    embedTarget: "#faq",
+    embedSettings: {
+    css: ``,
+    },
+}]
+        </pre>
+      </div>
+    </section>
+
+    <!-- Section 2 -->
+    <section class="container mx-auto my-8">
+      <div
+        class="border-b-2 border-gray-400 flex items-center justify-between pb-2"
+      >
+        <h2 class="text-xl font-bold text-gray-800">Inline Conversations</h2>
+        <button class="bg-gray-200 text-gray-600 rounded-md px-4 py-2">
+          Show Code
+        </button>
+      </div>
+      <div class="mt-4 p-4 flex content-center">
+        <div id="conversation-inline"></div>
+        <!-- Code snippet -->
+        <pre class="hidden bg-gray-100 p-4 my-4 text-xs">
+    {
+        id: "435117c7f495b7ba",
+        embedType: "conversational-inline",
+        embedTarget: "#conversation-inline",
+        embedSettings: {
+          title: "Hello from Clamy",
+          description: "Ask me about clamy",
+          css: `
+            @keyframes gradient-background {
+                0% {
+                    background-image: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+                    background-position: 0% 50%;
+                }
+                50% {
+                    background-image: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+                    background-position: 100% 50%;
+                }
+                100% {
+                    background-image: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+                    background-position: 0% 50%;
+                }
+            }
+            .ConversationHeader {
+                background-size: 400% 400% !important;
+            	animation: gradient-background 10s ease infinite !important;
+            }
+
+            .ConversationHeaderTitle {
+                color: white !important;
+            }
+
+            .ConversationHeaderDesc {
+                color: white !important;
+            }
+
+            .ConversationMain {
+                border-radius: 10px !important;
+                overflow: hidden !important;
+                background: linear-gradient(0deg, #f2f2f2, #fff, #fff, #fff, #fff, transparent) !important;
+                border: 1px solid #f2f2f2
+            }
+          `,
+        },
+        </pre>
+      </div>
+    </section>
+
+    <!-- Section 3 -->
+    <section class="container mx-auto my-8">
+      <div
+        class="border-b-2 border-gray-400 flex items-center justify-between pb-2"
+      >
+        <h2 class="text-xl font-bold text-gray-800">Conversation widget</h2>
+        <button class="bg-gray-200 text-gray-600 rounded-md px-4 py-2">
+          Show Code
+        </button>
+      </div>
+      <div class="mt-4">
+        <!-- Embedded iframe -->
+        Check left bottom widget
+        <!-- Code snippet -->
+        <pre class="hidden bg-gray-100 p-4 my-4">
+{
+    id: "435117c7f495b7ba",
+    embedType: "conversation",
+    embedSettings: {
+        title: "Hello World",
+        description: "Welcome to the world of Narnia",
+        css: ".ConversationHeader {} .ConversationMessages {}",
+    },
+}
+        </pre>
+      </div>
+    </section>
+
+    <script>
+      // Add event listener to show/hide code snippet
+      const codeButtons = document.querySelectorAll("button");
+      codeButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          const code =
+            button.parentNode.nextElementSibling.querySelector("pre");
+          code.classList.toggle("hidden");
+        });
+      });
+    </script>
+  </body>
+  <script>
+    window.clamyWidgetSettings = [
+      {
+        id: "435117c7f495b7ba",
+        embedType: "faq",
+        embedTarget: "#faq",
+        embedSettings: {
+          css: ``,
+        },
+      },
+      {
+        id: "435117c7f495b7ba",
+        embedType: "conversational-inline",
+        embedTarget: "#conversation-inline",
+        embedSettings: {
+          title: "Hello from Clamy",
+          description: "Ask me about clamy",
+          css: `
+            @keyframes gradient-background {
+                0% {
+                    background-image: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+                    background-position: 0% 50%;
+                }
+                50% {
+                    background-image: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+                    background-position: 100% 50%;
+                }
+                100% {
+                    background-image: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+                    background-position: 0% 50%;
+                }
+            }
+            .ConversationHeader {
+                background-size: 400% 400% !important;
+            	animation: gradient-background 10s ease infinite !important;
+            }
+
+            .ConversationHeaderTitle {
+                color: white !important;
+            }
+
+            .ConversationHeaderDesc {
+                color: white !important;
+            }
+
+            .ConversationMain {
+                border-radius: 10px !important;
+                overflow: hidden !important;
+                background: linear-gradient(0deg, #f2f2f2, #fff, #fff, #fff, #fff, transparent) !important;
+                border: 1px solid #f2f2f2
+            }
+          `,
+        },
+      },
+      {
+        id: "435117c7f495b7ba",
+        embedType: "conversation",
+        embedSettings: {
+          title: "Hello World",
+          description:
+            "Welcome to the world of Clamy. Ask me anything about clamy and I'll try to answer",
+          css: `.ConversationMain {
+                border-radius: 10px !important;
+                overflow: hidden !important;
+                background: linear-gradient(0deg, #f2f2f2, #fff, #fff, #fff, #fff, transparent) !important;
+                border: 1px solid #f2f2f2
+            }`,
+        },
+      },
+    ];
+  </script>
+  <script src="https://sidebar-widget.clamy.app/shim.js"></script>
+</html>
