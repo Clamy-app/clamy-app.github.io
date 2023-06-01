@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hostel world</title>
+    <style>
+      header {
+        display: flex;
+        align-items: center;
+        padding: 1rem;
+        background-color: #d8ebf3;
+      }
+      h1 {
+        margin-left: 1rem;
+        font-family: Arial, sans-serif;
+        font-size: 1.5rem;
+      }
+
+      .logo {
+        width: 41px;
+        height: 32px;
+      }
+      body {
+        height: 100%;
+        background: rgb(91 132 230 / 6%);
+        font-family: Arial, sans-serif;
+      }
+
+      .container {
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>Hostelworld</header>
+    <div class="container">
+      <div>
+        This is a demo page for HostelWorld chatbot sourced data from their blog
+      </div>
+      <div
+        id="input"
+        style="height: 600px; width: 400px; margin-top: 12px"
+      ></div>
+    </div>
+  </body>
+  <script>
+    window.clamyWidgetSettings = [
+      {
+        id: "4755761723648fd2",
+        embedType: "conversation",
+        embedTarget: "#input",
+        embedSettings: {
+          title: "Hostelworld",
+          display: "inline",
+          description:
+            "I'm your virtual assistant and can answer your queries on Hostelworld. How can I help you today?",
+          css: `
+      .ConversationHeader {
+        background: linear-gradient(to right, #e5a57a, #f3724b, #f3724b, #f54813) !important;
+        color: #fff !important;
+      }
+      .ConversationHeaderTitle {
+        color: #fff !important;
+      }
+
+      .ConversationHeaderDesc {
+        color: #f2f2f2 !important
+      }
+
+      .ConversationLauncher {
+        background: #f17a30 !important;
+      }
+
+      .ConversationMainContainer {
+        background: linear-gradient(0deg, #f2f2f2, #fff, #fff, #fff, #fff, transparent) !important;
+      }
+    `,
+        },
+      },
+    ];
+  </script>
+  <script src="https://sidebar-widget.clamy.app/shim.js"></script>
+</html>
